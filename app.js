@@ -3,10 +3,9 @@ let amigos = []
 
 function agregarAmigo() {
     let amigo = (document.querySelector('#amigo').value);
-    amigos.push(amigo);
+    (amigo === '') ? 'Por favor, inserte un nombre.' : amigos.push(amigo);
     limpiarCaja();
-        if (amigo == "");
-            alert('Por favor, inserte un nombre.');
+    
 }
 
 function limpiarCaja() {
