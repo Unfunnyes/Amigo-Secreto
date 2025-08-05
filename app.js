@@ -5,7 +5,7 @@ function agregarAmigo() {
     let amigo = (document.querySelector('#amigo').value);
     amigos.push(amigo);
     limpiarCaja();
-        if (amigo === "");
+        if (amigo == "");
             alert('Por favor, inserte un nombre.');
 }
 
