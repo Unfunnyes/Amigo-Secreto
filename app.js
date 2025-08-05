@@ -13,3 +13,8 @@ function limpiarCaja() {
     document.querySelector('#amigo').value = '';
 }
 
+function listaAmigos() {
+    let lista = (document.querySelector('#listaAmigos').value);
+    lista.innerHTML = ""
+    
+}
