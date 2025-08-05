@@ -3,10 +3,14 @@ let amigos = []
 
 function agregarAmigo() {
     let amigo = (document.querySelector('#amigo').value);
-    (amigo == '') ? alert('Por favor, inserte un nombre.') : amigos.push(amigo);
-    console.log(amigos)
+    if (amigo == '') {
+        alert('Por favor, inserte un nombre.')
+    }   else {
+            amigos.push(amigo);
+            console.log(amigos)
+            listaAmigos();
+        }
     limpiarCaja();
-    
 }
 
 function limpiarCaja() {
@@ -16,5 +20,9 @@ function limpiarCaja() {
 function listaAmigos() {
     let lista = (document.querySelector('#listaAmigos').value);
     lista.innerHTML = ""
-    
+    for (let i = 0; i < amigos.length; i++) {
+        let item = document.createElement('li');
+        item.textContent = amigos[i];
+        lista.push(item);
+    }
 }
