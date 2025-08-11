@@ -18,7 +18,7 @@ function limpiarCaja() {
 }
 
 function listaAmigos() {
-    let lista = (document.querySelector('#listaAmigos').value);
+    let lista = (document.querySelector('#listaAmigos'));
     lista.innerHTML = ""
     for (let i = 0; i < amigos.length; i++) {
         let item = document.createElement('li');
