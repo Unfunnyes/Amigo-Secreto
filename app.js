@@ -23,6 +23,18 @@ function listaAmigos() {
     for (let i = 0; i < amigos.length; i++) {
         let item = document.createElement('li');
         item.textContent = amigos[i];
-        lista.push(item);
+        lista.appendChild(item);
     }
 }
+
+function generarAmigoSecreto() {
+    if (amigos.length === 0) {
+        alert("No hay amigos.");
+    }
+    let numero = Math.floor(Math.random()* amigos.length);
+    let amigoElegido = amigos[numero];
+    document.getElementById('resultado').innerHTML = `El amigo sorteado es ${amigoElegido}`;
+}
+
+
+
