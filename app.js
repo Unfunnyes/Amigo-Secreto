@@ -5,6 +5,7 @@ function agregarAmigo() {
     let amigo = (document.querySelector('#amigo').value);
     if (amigo == '') {
         alert('Por favor, inserte un nombre.')
+        return;
     }   else {
             amigos.push(amigo);
             console.log(amigos);
@@ -27,7 +28,7 @@ function listaAmigos() {
     }
 }
 
-function generarAmigoSecreto() {
+function sortearAmigo() {
     if (amigos.length === 0) {
         alert("No hay amigos.");
     }
